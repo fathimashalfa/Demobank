@@ -1,0 +1,246 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns="http://www.w3.org/1999/html">-->
+<!--<head>-->
+<!--    <style>-->
+<!--        /* more styles added to beautify the input fields */-->
+<!--input {-->
+<!--  margin: 0.25em 0em 1em 0em;-->
+<!--  outline: none;-->
+<!--  padding: 0.5em;-->
+<!--  border: none;-->
+<!--  background-color: rgb(225, 225, 225);-->
+<!--  border-radius: 0.25em;-->
+<!--  color: black;-->
+<!--}-->
+<!--/* styles for button */-->
+<!--button {-->
+<!--  padding: 0.75em;-->
+<!--  border: none;-->
+<!--  outline: none;-->
+<!--  background-color: rgb(68, 18, 232);-->
+<!--  color: white;-->
+<!--  border-radius: 0.25em;-->
+<!--}-->
+
+<!--/* hover functionality for button */-->
+<!--button:hover {-->
+<!--  cursor: pointer;-->
+<!--  background-color: rgb(41, 4, 164);-->
+<!--}-->
+
+<!--    </style>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!-- <form action="register" method="post">-->
+<!--     {% csrf_token %}-->
+<!--      &lt;!&ndash; class named "container" is assigned to div &ndash;&gt;-->
+<!--     <fieldset>-->
+<!--     <div class="container">-->
+<!--        <h1>Register Form</h1>-->
+
+<!--        <label for="username"><b>Username</b></label>-->
+<!--        <input-->
+<!--          type="text"-->
+<!--          placeholder="Enter username"-->
+<!--          name="username"-->
+<!--          id="username"-->
+<!--          required-->
+<!--        /><br>-->
+
+<!--        <label for="pwd"><b>Password</b></label>-->
+<!--        <input-->
+<!--          type="password"-->
+<!--          placeholder="Enter Password"-->
+<!--          name="password"-->
+<!--          id="pwd"-->
+<!--          required-->
+<!--        /><br>-->
+
+<!--        <label for="pwd-repeat"><b>Confirm Password</b></label>-->
+<!--        <input-->
+<!--          type="password"-->
+<!--          placeholder="confirm password"-->
+<!--          name="password1"-->
+<!--          id="pwd-repeat"-->
+<!--          required-->
+<!--        /><br>-->
+
+
+<!--        <button type="submit" value="submit">Submit</button>-->
+
+
+
+<!-- </div>-->
+<!--       </fieldset>-->
+<!--    </form>-->
+<!--{% for msg in messages %}-->
+<!--<h1>{{msg}}</h1>-->
+<!--{% endfor %}-->
+
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+    <title>Signup Page</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <style media="screen">
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #080710;
+}
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+}
+form{
+    height: 600px;
+    width: 450px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 2px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+button{
+    margin-top: 14px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.social{
+  margin-top: 30px;
+  display: flex;
+}
+.social div{
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255,255,255,0.27);
+  color: #eaf0fb;
+  text-align: center;
+}
+.social div:hover{
+  background-color: rgba(255,255,255,0.47);
+}
+.social .fb{
+  margin-left: 25px;
+}
+.social i{
+  margin-right: 4px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form action="" method="post">
+        {% csrf_token %}
+        <h3>Registration</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Username" name="username" id="username">
+
+
+
+        <label for="password1">Password</label>
+        <input type="password1" placeholder="Password" id="password1" name="password1">
+
+
+        <label for="password2">Confrom Password</label>
+        <input type="password2" placeholder="Confrom Password" id="password2" name="password2">
+        <button type="submit">Submit</button>
+
+
+    </form>
+</body>
+</html>

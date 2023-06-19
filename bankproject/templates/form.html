@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+<!--        /* more styles added to beautify the input fields */-->
+<!--input {-->
+<!--  margin: 0.25em 0em 1em 0em;-->
+<!--  outline: none;-->
+<!--  padding: 0.5em;-->
+<!--  border: none;-->
+<!--  background-color: rgb(225, 225, 225);-->
+<!--  border-radius: 0.25em;-->
+<!--  color: black;-->
+<!--}-->
+<!--/* styles for button */-->
+<!--button {-->
+<!--  padding: 0.75em;-->
+<!--  border: none;-->
+<!--  outline: none;-->
+<!--  background-color: rgb(68, 18, 232);-->
+<!--  color: white;-->
+<!--  border-radius: 0.25em;-->
+<!--}-->
+
+<!--/* hover functionality for button */-->
+<!--button:hover {-->
+<!--  cursor: pointer;-->
+<!--  background-color: rgb(41, 4, 164);-->
+<!--}-->
+<style>
+fieldset {
+  background-color: black;
+}
+
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+}
+
+input {
+  margin: 5px;
+}
+</style>
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ 
+
+<fieldset>
+ <form action="" method="post">
+     {% csrf_token %}
+    <legend>Form</legend>
+     <table>
+
+  <tr>
+    <td><label for="name">Name:</label></td>
+    <td><input type="text" name="name" id="name" placeholder="your name"></td>
+  </tr>
+  <tr>
+    <td><label for="dob">DOB:</label></td>
+    <td><input type="date" name="dob" id="dob" placeholder="DOB"></td>
+  </tr>
+  <tr>
+    <td><label>Age:</label></td>
+    <td><input type="number" name="age" id="age" placeholder="Age"></td>
+  </tr>
+  <tr>
+    <td><label>Gender:</label></td>
+    <td>Male: <input type="radio" name="gender" value="male">
+      Female: <input type="radio" name="gender" value="female">
+      Transgender: <input type="radio" name="gender" value="Transgender"></td>
+  </tr>
+  <tr>
+    <td><label for="phoneNumber">Phone Number:</label></td>
+    <td><input type="number" name="phoneNumber" id="phoneNumber"></td>
+  </tr>
+  <tr>
+    <td><label for="email">Email:</label></td>
+    <td><input type="text" name="email" id="email" placeholder="your email"></td>
+  </tr>
+
+  <tr>
+    <td><label for="address">Address:</label></td>
+    <td><textarea name="address" id="address" placeholder="Address"></textarea></td>
+  </tr>
+
+
+  <tr>
+    <td><label for="district">District</label></td>
+    <td>
+      <select name="district" id="district" class="district-dropdown">
+        <option value="">--Select District--</option>
+        <option value="malappuram">malappuram</option>
+        <option value="kozhikode">kozhikode</option>
+        <option value="wayanad">wayanad</option>
+        <option value="Idukki">Idukki</option>
+        <option value="palakkad">palakkad</option>
+        <option value="Eranakulam">Eranakulam</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td> <label for="branch">Branch:</label></td>
+    <td>
+      <select id="branch" name="branch" class="branch-dropdown">
+        <option value="">--Select Branch--</option>
+          <option value="malappuram">malappuram</option>
+        <option value="kozhikode">kozhikode</option>
+        <option value="Kottakkal">Kottakkal</option>
+        <option value="Ramanattukara">Ramanattukara</option>
+        <option value="thamarassery">thamarassery</option>
+        <option value="kochi">kochi</option>
+          <option value="alua">alua</option>
+        <option value="thodupuzha">thodupuzha</option>
+        <option value="kalpatta">kalpatta</option>
+
+
+      </select></td>
+  </tr>
+  <tr>
+    <td><label for="Account">Account Type</label></td>
+    <td>
+      <select id="account" name="account">
+        <option value="">Choose</option>
+        <option value="Savings">Savings</option>
+        <option value="Current">Current</option>
+      </select></td>
+  </tr>
+  <tr>
+    <td><label>Materials Required :</label></td>
+    <td>
+      <input type="checkbox" id="debit" name="materials" value="Debit Card">
+      <label for="debit">Debit Card</label>
+      <input type="checkbox" id="credit" name="materials" value="Credit Card">
+      <label for="credit">Credit Card</label>
+      <input type="checkbox" id="cheque" name="materials" value="Chequebook">
+      <label for="debit">Cheque Book</label></td>
+  </tr>
+
+</table>
+    <button type="submit" class="btn btn-primary">Submit</button>
+         <button type="button" class="btn btn-info"><a href="{% url 'logout' %}"> Logout</a></button>
+ </form>
+</fieldset>
+   
+<!--{% for msg in messages %}-->
+<!--<h1>{{msg}}</h1>-->
+<!--{% endfor %}-->
+
+</body>
+</html>
