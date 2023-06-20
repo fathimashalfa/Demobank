@@ -18,11 +18,12 @@
 <ul class="messages text-success">
     {% for message in messages %}
     <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+  <a href="{% url 'index' %}">Home</a>
     {% endfor %}
 </ul>
 {% endif %}
     <h1>homepage</h1>
-    <button  type="button" class="btn btn-success" ><a href="{%url 'index'%}">Home</a></button>
+    <button  type="button" class="btn btn-success" ><a href="{% url 'form' %}">Home</a></button>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
